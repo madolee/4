@@ -1,0 +1,81 @@
+URL url = null;
+URLConnection uc = null;
+
+try{
+       url = new URL("http://www.korea.co.kr");
+}catch(MalformedURLException me){}
+
+try{    uc = url.openConnection(); }catch(IOException io){}
+
+  System.out.println("output = "+ uc.getDoOutput());
+  System.out.println("Input = "+ uc.getDoInput());
+  uc.setDoOutput(true);  // 스트림 출력 설정
+  uc.setDoInput(true);    // 스트림 입력 설정 -- 기본적으로 입력 스트림
+  OutputStream out =null;
+  InputStream in = null;
+try{
+       in = uc.getInputStream();
+//   out = uc.getOutputStream();
+}catch(IOException ie){}
+System.out.println("input = "+ in.toString());
+//  System.out.println("out = "+ out.toString());
+[출처] java.net.URLConnection - url 연결사용|작성자 시골아저씨
+----------
+
+
+https://seopseop911.tistory.com/36  파이어 베이스 직접 연결 사용하기
+
+----------------
+다른앱 실행시키기
+
+http://blog.naver.com/mdown/221942466647
+
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val intentDial = Intent(Intent.ACTION_DIAL) // 다이얼 앱을 실행하는 행동(Action)을 넣음
+
+        button.setOnClickListener { // 버튼이 눌리면
+            startActivity(intentDial) // 액티비티 실행
+        }
+    }
+}
+[출처] [안드로이드 스튜디오] #4-5 다른 앱 실행하기 : 기본 어플|작성자 mdown
+
+------------------
+https://deumdroid.tistory.com/28
+
+ private Intent intent;
+    private Intent intent1;
+    private final String packageName = "com.twitter.android";
+    private final String packageNames = "com.instagram.android";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        intent1 = this.getPackageManager().getLaunchIntentForPackage(packageName);
+        ImageButton imageButtonss = (ImageButton) findViewById(R.id.witterbtn);
+        imageButtonss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.this.startActivity(intent1);
+            }
+        });
+
+
+        intent = this.getPackageManager().getLaunchIntentForPackage(packageNames);
+        ImageButton imageButtons = (ImageButton) findViewById(R.id.instaicon);
+        imageButtons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.this.startActivity(intent);
+            }
+        });
+    }
+}
