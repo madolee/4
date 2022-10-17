@@ -1,0 +1,90 @@
+public class Test04 { 	
+public static void main(String[] args) { 	
+	// TODO Auto-generated method stub 		
+	Scanner scan = new Scanner(System.in); 		
+	System.out.print("하고싶은 것을 선택하세요 => 1: 게임하기, 2: 게임소개, 3: 게임종료 "); 		
+	int n = scan.nextInt(); 		
+	switch (n) {	//인자로 비교할 대상이 들어가야한다. 		
+	case 1:			// 인자와 비교할 첫 번째 값이 들어간다. 			
+	System.out.println("1: 게임하기"); 			
+	break; 		
+	case 2:			// 인자와 비교할 두 번째 값이 들어간다. 			
+	System.out.println("2: 게임소개"); 			
+	break; 		
+	case 3:			// 인자와 비교할 세 번째 값이 들어간다. 			
+	System.out.println("3: 게임종료"); 			
+	break; 		
+	default: 			
+	System.out.println("메뉴 선택이 올바르지 않아요"); 			
+	break; 		} 		/* if 문장으로 바꿔보기 	 	 
+	if (n==1) { 			
+	System.out.println("1 : 게임하기"); 		} 
+	else if (n==2) { 			
+	System.out.println("2 : 게임소개"); 		} 
+	else if (n==3) { 			
+	System.out.println("3 : 게임종료"); 		}
+ else { 			
+ System.out.println(" 메뉴선택이 올바르지 않아요."); 		
+ } 		 */ 		
+scan.close(); 	} }
+
+
+---------------------------------------
+
+
+import java.util.*; 
+
+
+public class input {
+ 
+    public static void main(String[] args) {
+        
+      
+        Scanner scanner = new Scanner(System.in);
+ 
+ 
+ 
+        //문자열 입력받은 후 printf를 이용해서 형식화된 출력
+        System.out.print("문자를 m.,m입력해주세요:");
+        String inputString = scanner.nextLine();
+        System.out.printf("inputString=%s%n", inputString);
+ 
+        
+ 
+ 
+        //정수 입력받은 후 printf를 이용해서 형식화된 출력
+        System.out.print("정수를 입력해주세요:");
+        int inputInt = scanner.nextInt();
+        System.out.printf("inputInt=%d%n", inputInt);
+ 
+ 
+ 
+ 
+        //실수 입력받은 후 printf를 이용해서 형식화된 출력    
+        System.out.print("실수를 입력해주세요:");
+        double inputRealNumber=scanner.nextDouble();
+        System.out.printf("inputRealNumber=%f%n",inputRealNumber); // %f는 소수점 7자리에서 반올림해줌
+        scanner.nextLine(); // scanner 버퍼 비우기 ->nextLine()전에 다른걸 입력받았으면 scanner 버퍼 비워줘야함
+ 
+ 
+ 
+        //scanner.nextLine()으로 정수,실수를 입력받는경우 해당 자료형으로 변환해서 저장해야함
+        System.out.print("정수를 입력해주세요:");
+        int inputInt2=Integer.parseInt(scanner.nextLine());
+        System.out.printf("inputInt2=%d%n",inputInt2);
+ 
+        System.out.print("실수를 입력해주세요:");
+        double inputRealNumber2=Double.parseDouble(scanner.nextLine());
+        System.out.printf("inputRealNumber2=%f%n",inputRealNumber2);
+ 
+        //scanner 객체가 참조하고있는 스트림을 닫아줌
+        scanner.close();  
+ 
+    }
+ 
+}
+
+
+
+
+
