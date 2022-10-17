@@ -1,0 +1,84 @@
+
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText edittext;      // 메세지 입력 뷰
+    TextView textView;      // 작성 글자 수 나타내는 뷰
+    Button button1;         // 작성 버튼
+    Button button2;         // 끝남 버튼
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+
+        edittext = (EditText) findViewById(R.id.edittext);
+        textView = (TextView) findViewById(R.id.textView);
+        button1 = (Button) findViewById(R.id.button1);
+        button2 = (Button) findViewById(R.id.button2);
+        button3 = (Button) findViewById(R.id.button3);
+        button4 = (Button) findViewById(R.id.button4);  
+
+
+
+        String txt1=" this is txt 1";
+        String txt2=" this is txt 2";
+        String txt3=" this is txt 3";
+
+#frist  display
+#  " this message " AND after event display each item
+
+
+public void onButton1Clicked(View v) {
+      
+ textView.setText(txt1);  
+ # display textview;
+ 
+public void onButton2Clicked(View v) {
+       
+ textView.setText(txt2);  
+# display textview;
+public void onButton3Clicked(View v) {
+      
+ textView.setText(txt3); 
+ 
+ # display textview;
+public void onButton4Clicked(View v) {
+        finish();
+        
+        
+        
+        
+        -------------
+        
+        다음은 java코드입니다. Button을 눌렀을 때 EditText에 들어간 텍스트를 TextView로 보낼 것이므로 Button에 리스너를 만들겠습니다. onCreate()안에 들어간 부분만 보겠습니다.
+
+@Override
+ protected void onCreate(Bundle savedInstanceState) {
+ super.onCreate(savedInstanceState);
+ setContentView(R.layout.activity_main);
+final EditText edittext=(EditText)findViewById(R.id.edittext);
+ Button button=(Button)findViewById(R.id.button);
+ final TextView textView=(TextView)findViewById(R.id.textview);
+button.setOnClickListener(new View.OnClickListener() {
+ @Override
+ public void onClick(View v) {
+ textView.setText(edittext.getText());
+ }
+ });
+ }
+각각의 뷰를 선언해주고 button은 클릭했을 때 액션을 취할 것이므로 setonClickListener를 이용하여 리스너를 만듭니다. 그리고 onClick메소드 안에 버튼이 클릭되었을 때 실행될 행동을 넣습니다. textView.setText();는 TextView에 들어갈 텍스트를 설정하는 코드입니다. 그리고 edittext.getText()는 EditText에서 입력된 텍스트를 불러오는 코드입니다. 이 두 코드를 이용하여 버튼이 눌렸을 때 나올 액션을 설정해주었습니다.
+
+
+2. 마무리
+EditText와 Button, TextView를 이용하는 방법을 알아봤고, 리스너와 이벤트에 대해 알고 리스너를 사용했습니다. 리스너의 경우 여러 이벤트에 대해 있으므로 필요한 경우에 맞춰 리스너를 이용하시면 됩니다.
+
+그리고 이번 포스팅에 쓰인 코드 github주소 남겨두겠습니다. 필요하시면 받아서 쓰세요~!
+
+https://github.com/songmho/Edittext
+각각의 뷰를 선언해주고 button은 클릭했을 때 액션을 취할 것이므로 setonClickListener를 이용하여 리스너를 만듭니다. 그리고 onClick메소드 안에 버튼이 클릭되었을 때 실행될 행동을 넣습니다. textView.setText();는 TextView에 들어갈 텍스트를 설정하는 코드입니다. 그리고 edittext.getText()는 EditText에서 입력된 텍스트를 불러오는 코드입니다. 이 두 코드를 이용하여 버튼이 눌렸을 때 나올 액션을 설정해주었습니다.
+
+
