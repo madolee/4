@@ -22,10 +22,10 @@ import java.net.URLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edittext;      // 메세지 입력 뷰
-    TextView textView;      // 작성 글자 수 나타내는 뷰
-    Button button1;         // 작성 버튼
-    Button button2;         // 끝남 버튼
+    EditText edittext; // 메세지 입력 뷰
+    TextView textView; // 작성 글자타내는 뷰
+    Button button1;    // 작성 버튼9
+    Button button2;    // 끝남 버튼
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
