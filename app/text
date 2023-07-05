@@ -1,4 +1,4 @@
-URL url = null;
+//URL url = null;
 URLConnection uc = null;
 
 try{
