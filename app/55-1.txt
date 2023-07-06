@@ -70,15 +70,24 @@ button.setOnClickListener(new View.OnClickListener() {
  }
  });
  }
-각각의 뷰를 선언해주고 button은 클릭했을 때 액션을 취할 것이므로 setonClickListener를 이용하여 리스너를 만듭니다. 그리고 onClick메소드 안에 버튼이 클릭되었을 때 실행될 행동을 넣습니다. textView.setText();는 TextView에 들어갈 텍스트를 설정하는 코드입니다. 그리고 edittext.getText()는 EditText에서 입력된 텍스트를 불러오는 코드입니다. 이 두 코드를 이용하여 버튼이 눌렸을 때 나올 액션을 설정해주었습니다.
+각각의 뷰를 선언해주고 button은 클릭했을 때 액션을 취할 것이므로 setonClickListener를 이용하여 리스너를 만듭니다. 
+그리고 onClick메소드 안에 버튼이 클릭되었을 때 실행될 행동을 넣습니다. 
+textView.setText();는 TextView에 들어갈 텍스트를 설정하는 코드입니다. 
+그리고 edittext.getText()는 EditText에서 입력된 텍스트를 불러오는 코드입니다. 
+이 두 코드를 이용하여 버튼이 눌렸을 때 나올 액션을 설정해주었습니다.
 
 
 2. 마무리
-EditText와 Button, TextView를 이용하는 방법을 알아봤고, 리스너와 이벤트에 대해 알고 리스너를 사용했습니다. 리스너의 경우 여러 이벤트에 대해 있으므로 필요한 경우에 맞춰 리스너를 이용하시면 됩니다.
+EditText와 Button, TextView를 이용하는 방법을 알아봤고, 리스너와 이벤트에 대해 알고 리스너를 사용했습니다. 
+리스너의 경우 여러 이벤트에 대해 있으므로 필요한 경우에 맞춰 리스너를 이용하시면 됩니다.
 
 그리고 이번 포스팅에 쓰인 코드 github주소 남겨두겠습니다. 필요하시면 받아서 쓰세요~!
 
 https://github.com/songmho/Edittext
-각각의 뷰를 선언해주고 button은 클릭했을 때 액션을 취할 것이므로 setonClickListener를 이용하여 리스너를 만듭니다. 그리고 onClick메소드 안에 버튼이 클릭되었을 때 실행될 행동을 넣습니다. textView.setText();는 TextView에 들어갈 텍스트를 설정하는 코드입니다. 그리고 edittext.getText()는 EditText에서 입력된 텍스트를 불러오는 코드입니다. 이 두 코드를 이용하여 버튼이 눌렸을 때 나올 액션을 설정해주었습니다.
+각각의 뷰를 선언해주고 button은 클릭했을 때 액션을 취할 것이므로 setonClickListener를 이용하여 리스너를 만듭니다. 
+그리고 onClick메소드 안에 버튼이 클릭되었을 때 실행될 행동을 넣습니다. 
+textView.setText();는 TextView에 들어갈 텍스트를 설정하는 코드입니다. 
+그리고 edittext.getText()는 EditText에서 입력된 텍스트를 불러오는 코드입니다. 
+이 두 코드를 이용하여 버튼이 눌렸을 때 나올 액션을 설정해주었습니다.
 
 
