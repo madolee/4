@@ -1,79 +1,63 @@
 package com.example.a4;
 
+
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.InputFilter;
-import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.a4.R;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edittext; // 메세지 입력 뷰
-    TextView textView; // 작성 글자타내는 뷰
-    Button button1;    // 작성 버튼9
-    Button button2;    // 끝남 버튼
+    private static final String TAG_ID = "id";
+    private static final String TAG_NAME = "name";
+    private static final String TAG_ADDRESS ="address";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        TextView mTextView = (TextView) findViewById(R.id.textview_main_list);
+        ArrayList<HashMap<String, String>> mArrayList = new ArrayList<>();
 
 
-        String txt1=" this is txt 1";
-        String txt2=" this is txt 2";
-        String txt3=" this is txt 3";
+        for (int i = 0; i < 20; i++) {
 
-#frist  display
-#  " this message " AND after event display each item
+            HashMap<String, String> hashMap = new HashMap<>();
 
-public void onButton1Clicked(View v) {
-      
- textView.setText(txt1);  
- # display textview;
-}
- 
-public void onButton2Clicked(View v) {
-       
- textView.setText(txt2);  
-# display textview;
-    }
-public void onButton3Clicked(View v) {
-      
- textView.setText(txt3); 
-}
- 
- # display textview;
-public void onButton4Clicked(View v) {
-        finish();
-    }
+            hashMap.put(TAG_ID, "id " + i);
+            hashMap.put(TAG_NAME, "name " + i);
+            hashMap.put(TAG_ADDRESS, "address " + i);
+
+            mArrayList.add(hashMap);
+        }
 
 
 
+        for (int i = 0; i < 20; i++) {
+
+            HashMap<String, String> outputHashMap = mArrayList.get(i);
+            String id = outputHashMap.get("id");
+            String name = outputHashMap.get("name");
+            String address = outputHashMap.get("address");
 
 
+            String str = String.format(String.valueOf(getResources())
+                    , id, name, address);
+  //.getString(R.string.textview_message), id, name, address);
 
-        
+            mTextView.append(str);
+        }
+
     }
 }
 
 
-
-
-******************
+//******************
     //     URL url = null;
     //     URLConnection uc = null;
 
@@ -117,7 +101,7 @@ public void onButton4Clicked(View v) {
 
     // public void onButton2Clicked(View v) {
     //     finish();
-*****************
+//*****************
 
 
  // 홈 체app영역 내컴과 동기화
