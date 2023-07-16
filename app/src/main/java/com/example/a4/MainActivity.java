@@ -37,26 +37,21 @@ public class MainActivity extends AppCompatActivity {
         String txt2=" this is txt 2";
         String txt3=" this is txt 3";
 
-#frist  display
-#  " this message " AND after event display each item
 
 public void onButton1Clicked(View v) {
       
- textView.setText(txt1);  
- # display textview;
+ textView.setText(txt1);
 }
  
 public void onButton2Clicked(View v) {
        
- textView.setText(txt2);  
-# display textview;
+ textView.setText(txt2);
     }
 public void onButton3Clicked(View v) {
       
  textView.setText(txt3); 
 }
- 
- # display textview;
+
 public void onButton4Clicked(View v) {
         finish();
     }
