@@ -67,8 +67,6 @@ public void onButton4Clicked(View v) {
 
 
 
-
-******************
     //     URL url = null;
     //     URLConnection uc = null;
 
@@ -112,8 +110,6 @@ public void onButton4Clicked(View v) {
 
     // public void onButton2Clicked(View v) {
     //     finish();
-*****************
-
 
  // 홈 체app영역 내컴과 동기화
 //사컴에서 버튼 4개 바로 실행할 준비
