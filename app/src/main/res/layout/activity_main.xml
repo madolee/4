@@ -75,6 +75,30 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RadioButton"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="191dp"
+        android:layout_height="151dp"
+        android:clickable="true"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="564dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="579dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

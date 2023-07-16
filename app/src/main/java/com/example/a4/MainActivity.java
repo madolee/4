@@ -1,74 +1,71 @@
 package com.example.a4;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.InputFilter;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.a4.R;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edittext; // 메세지 입력 뷰
+   // EditText edittext; // 메세지 입력 뷰
     TextView textView; // 작성 글자타내는 뷰
+
     Button button1;    // 작성 버튼9
     Button button2;    // 끝남 버튼
 
+    Button button3;    // 작성 버튼9
+    Button button4;
+
+    String txt1 = " this is txt 1";
+    String txt2 = " this is txt 2";
+    String txt3 = " this is txt 3";
+
+
+
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textView = findViewById(R.id.textView);
+        button1 =  findViewById(R.id.button1);
+        button2 =  findViewById(R.id.button2);
+        button3 =  findViewById(R.id.button1);
+        button4 =  findViewById(R.id.button2);
 
 
-        String txt1=" this is txt 1";
-        String txt2=" this is txt 2";
-        String txt3=" this is txt 3";
 
 
-public void onButton1Clicked(View v) {
-      
- textView.setText(txt1);
+
+
+    }
+public void onButton1Clicked(View view) {
+       textView.setText(txt1);
 }
  
 public void onButton2Clicked(View v) {
        
- textView.setText(txt2);
+        textView.setText(txt2);
     }
 public void onButton3Clicked(View v) {
       
- textView.setText(txt3); 
+        textView.setText(txt3);
 }
 
 public void onButton4Clicked(View v) {
         finish();
     }
 
-
-
-
-
-
-        
     }
-}
 
 
 
 
-******************
+
     //     URL url = null;
     //     URLConnection uc = null;
 
@@ -112,8 +109,6 @@ public void onButton4Clicked(View v) {
 
     // public void onButton2Clicked(View v) {
     //     finish();
-*****************
-
 
  // 홈 체app영역 내컴과 동기화
 //사컴에서 버튼 4개 바로 실행할 준비
