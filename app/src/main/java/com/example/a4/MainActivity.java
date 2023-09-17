@@ -32,38 +32,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+            edittext.addTextChangedListener(new TextWatcher() {
+        // addTextChangedListener 텍스트가 입력에 따라 변경될 때마다 확인하는 기능
+          // TextWatcher 텍스트가 변경될 때마다 발생하는 이벤트 처리하는 인터페이스
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-        String txt1=" this is txt 1";
-        String txt2=" this is txt 2";
-        String txt3=" this is txt 3";
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+            InputFilter[] filter = new InputFilter[1];
+               filter[0] = new InputFilter.LengthFilter(80);
+                // 쓸 수 있는 글자 수 최대 80자로 제한
+               edittext.setFilters(filter);
 
+               int currentBytes = s.toString().getBytes().length;        // 텍스트 내용을 받아와서 바이트 수를 가져온다.
+              String txt = String.valueOf(currentBytes) + " / 80 바이트";
+               textView.setText(txt);                                           // 텍스트뷰에 현재 바이트수 표시
+          }
 
-public void onButton1Clicked(View v) {
-      
- textView.setText(txt1);
-}
- 
-public void onButton2Clicked(View v) {
-       
- textView.setText(txt2);
-    }
-public void onButton3Clicked(View v) {
-      
- textView.setText(txt3); 
-}
+         public void afterTextChanged(Editable s) {}
+       });
+ }
 
-public void onButton4Clicked(View v) {
+ public void onButton1Clicked(View v) {
+       Toast.makeText(getApplicationContext(), (CharSequence) edittext.getText(), Toast.LENGTH_LONG).show();
+    }   // 전송 버튼을 클릭하면 작성된 메시지를 토스트로 띄어준다.
+   // editText.getText()의 반환형은 editable 이므로 CharSequence 타입으로 형변환 해준다.
+
+    public void onButton2Clicked(View v) {
         finish();
-    }
-
-
-
-
-
-
-        
-    }
-}
 
 
 
